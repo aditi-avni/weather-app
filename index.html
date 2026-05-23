@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Weather App</title>
+</head>
+
+<body>
+
+    <h1>Weather App</h1>
+
+    <div class="main-container">
+
+        <!-- SCREEN 1 -->
+        <div class="search-container">
+
+            <input type="text" id="city-input" placeholder="Enter city name">
+
+            <button id="search-button">
+                Search
+            </button>
+
+        </div>
+
+
+
+        <!-- SCREEN 2 -->
+        <div class="weather-container">
+
+            <!-- TOP SECTION -->
+            <div class="top-section">
+
+                <button type="button" id="back-button"> Back </button>
+
+                <p id="city-name"></p>
+
+                <div class="information">
+
+                    <img id="weather-icon" src="images/weather.png.png" alt="Weather Icon">
+
+                    <h2 id="main-temp"></h2>
+
+                    <p id="description"></p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- BOTTOM SECTION -->
+            <div class="bottom-section">
+
+                <div class="weather-card">
+
+                    <img id="temp-icon" src="images/temprature.png.png" alt="Temperature Icon">
+
+                    <p>Temperature</p>
+
+                    <p id="temp-value"></p>
+
+                </div>
+
+
+
+                <div class="weather-card">
+
+                    <img id="humidity-icon" src="images/humidity.png.png" alt="Humidity Icon">
+
+                    <p>Humidity</p>
+
+                    <p id="humidity-value"></p>
+
+                </div>
+
+
+
+                <div class="weather-card">
+
+                    <img id="wind-icon" src="images/wind.png.png" alt="Wind Speed Icon">
+
+                    <p>Wind Speed</p>
+
+                    <p id="wind-value"></p>
+
+                </div>
+
+
+
+                <div class="weather-card">
+
+                    <img id="aqi-icon" src="images/aqi.png.png" alt="AQI Icon">
+
+                    <p>Air Quality Index</p>
+
+                    <p id="aqi-value"></p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+<script src="app.js"></script>
+</body>
+</html>
