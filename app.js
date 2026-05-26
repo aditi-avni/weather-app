@@ -41,10 +41,10 @@ backButton.addEventListener("click", () => {
 const cityInput = document.getElementById("city-input");
 const cityName = document.getElementById("city-name");
 const mainTemp = document.getElementById("main-temp");
-const tempValue = document.getElementById("temp-value");
+const tempValue = document.getElementById("main-temp");
 const humidity = document.getElementById("humidity-value");
 const windSpeed = document.getElementById("wind-value");
-const aqi = document.getElementById("aqi-value");
+const feelsLike = document.getElementById("feels-like-value");
 
 //api setup 
 
@@ -54,12 +54,22 @@ const BASE_URL = "https://api.openweathermap.org/data/2.5/weather";
 
 async function getWeather(city) {
 const url = `${BASE_URL}?q=${city}&appid=${API_KEY}&units=metric`;
+
     console.log("API URL:", url); // Log the constructed URL
 
     const response = await fetch(url);
     const data = await response.json();
-    console.log("API Data:", data); // Log the API response
+    console.log("API Data:", data); 
+
+    //updating the UI values 
+
+    tempValue.innerText = `${data.main.temp}°C`;
+    cityName.innerText = data.name;
+    humidity.innerText = data.main.humidity + "%";
+    windSpeed.innerText = data.wind.speed + "m/s";
+    feelsLike.innerText = `${data.main.feels_like}°C`;
 }
+
 
 
 
