@@ -59,4 +59,4 @@ This project was created to practice JavaScript concepts like API integration, a
 
 ## Live Demo
 
-[Add your GitHub Pages link here]
+[https://aditi-avni.github.io/weather-app/]
