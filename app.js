@@ -43,6 +43,7 @@ const cityName = document.getElementById("city-name");
 const mainTemp = document.getElementById("main-temp");
 const tempValue = document.getElementById("main-temp");
 const humidity = document.getElementById("humidity-value");
+const pressure = document.getElementById("pressure-value");
 const windSpeed = document.getElementById("wind-value");
 const feelsLike = document.getElementById("feels-like-value");
 
@@ -63,11 +64,12 @@ const url = `${BASE_URL}?q=${city}&appid=${API_KEY}&units=metric`;
 
     //updating the UI values 
 
-    tempValue.innerText = `${data.main.temp}°C`;
+    tempValue.innerText = `${Math.round(data.main.temp)}°C`;
     cityName.innerText = data.name;
-    humidity.innerText = data.main.humidity + "%";
-    windSpeed.innerText = data.wind.speed + "m/s";
-    feelsLike.innerText = `${data.main.feels_like}°C`;
+    humidity.innerText = `${Math.round(data.main.humidity)}%`;
+    windSpeed.innerText = `${Math.round(data.wind.speed)} m/s`;
+    feelsLike.innerText = `${Math.round(data.main.feels_like)}°C`;
+    pressure.innerText = `${Math.round(data.main.pressure)} hPa`;
 }
 
 
